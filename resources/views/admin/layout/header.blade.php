@@ -176,11 +176,13 @@ License: You must have a valid license purchased only from themeforest(the above
 
 							@if(Auth::guard('admin')->check())
 
+							<li class="kt-menu__item  kt-menu__item--active" aria-haspopup="true"><a href="{{route('admin.ride.index')}}" class="kt-menu__link "><i class="kt-menu__link-icon fas fa-users"></i><span class="kt-menu__link-text">Rides</span></a></li>
+
 							<li class="kt-menu__item  kt-menu__item--active" aria-haspopup="true"><a href="{{route('admin.vendors.index','all')}}" class="kt-menu__link "><i class="kt-menu__link-icon fas fa-users"></i><span class="kt-menu__link-text">Customer</span></a></li>
 
-							<li class="kt-menu__item  kt-menu__item--active" aria-haspopup="true"><a href="{{route('admin.discount.index')}}" class="kt-menu__link "><i class="kt-menu__link-icon fas fa-users"></i><span class="kt-menu__link-text">Discount Master</span></a></li>
+							<!-- <li class="kt-menu__item  kt-menu__item--active" aria-haspopup="true"><a href="{{route('admin.discount.index')}}" class="kt-menu__link "><i class="kt-menu__link-icon fas fa-users"></i><span class="kt-menu__link-text">Discount Master</span></a></li>
 
-							<li class="kt-menu__item  kt-menu__item--active" aria-haspopup="true"><a href="{{route('admin.order.index')}}" class="kt-menu__link "><i class="kt-menu__link-icon fas fa-users"></i><span class="kt-menu__link-text">Orders</span></a></li>
+							<li class="kt-menu__item  kt-menu__item--active" aria-haspopup="true"><a href="{{route('admin.order.index')}}" class="kt-menu__link "><i class="kt-menu__link-icon fas fa-users"></i><span class="kt-menu__link-text">Orders</span></a></li> -->
 
 
 							<!-- <li class="kt-menu__item  kt-menu__item--active" aria-haspopup="true"><a href="{{route('admin.brand.index')}}" class="kt-menu__link "><i class="kt-menu__link-icon fas fa-bookmark"></i><span class="kt-menu__link-text">Brand</span></a></li>

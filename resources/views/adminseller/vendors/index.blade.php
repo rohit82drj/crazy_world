@@ -75,6 +75,7 @@
 								<th>Contact No</th>
 								<th>Is Active</th>
 								<th>Action</th>
+								<th>Add Money</th>
 
 
 							</tr>
@@ -103,6 +104,41 @@
 @stop
 
 @push('scripts')
+
+
+
+
+
+
+<div class="modal fade" id="kt_modal_4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			
+			<div class="modal-body">
+				 <form class="kt-form kt-form--label-right add_form" method="post" >
+                    @csrf
+					
+					<div class="form-group row">
+						<div class="col-lg-6">
+							<label for="recipient-name" class="form-control-label">Amount:</label>
+							<input type="text" class="form-control" name="price" onkeyup="if(/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')">
+						</div>					
+						
+					</div>
+					<div class="form-group">
+						<label for="message-text" class="form-control-label">Remark:</label>
+						<textarea class="form-control" id="message-text"></textarea>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary submit change_button">Add Order<i class="la la-spinner change_spin d-none"></i></button>
+				<!-- <button type="submit" class="btn btn-primary">Add Order</button> -->
+			</div>
+		</div>
+	</div>
+</div>
 
 
 
@@ -188,6 +224,15 @@
 					searchable: false,
 
 					data: 'action',
+
+				},
+				{
+
+					orderable: false,
+
+					searchable: false,
+
+					data: 'action1',
 
 				},
 

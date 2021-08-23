@@ -39,7 +39,12 @@ class VendorController extends Controller
 					$schk = view('admin.layout.activecheckbox')->with(['id' => $row->id , 'status'=>$row->status])->render();
 					return $schk;
                 })
-				->rawColumns(['singlecheckbox','action'])
+
+                 ->addColumn('action1', function($row){
+                           $btn = '<id="kt_modal_4" class="edit btn btn-sm btn-info"><i class="fa fa-plus" aria-hidden="true"></i></a>';
+                            return $btn;
+                    })
+                ->rawColumns(['singlecheckbox','action' ,'action1'])
 				->make(true);
 		}
 		$data['title'] = 'Add ' . $this->viewName;
@@ -143,7 +148,10 @@ class VendorController extends Controller
     {
         //
     }
-
+    public function add_money(Request $request)
+    {
+         //
+    }
     public function destory(Request $request)
     {
         $result = User::where('id',$request->id)->delete();

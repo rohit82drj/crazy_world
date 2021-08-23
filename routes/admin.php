@@ -50,6 +50,8 @@ Route::resource('discount','AdminSeller\DiscountController');
 Route::resource('blog','AdminSeller\BlogController');
 Route::resource('blogcategories','AdminSeller\BlogCategoriesController');
 Route::resource('testimonial','AdminSeller\TestimonialController');
+Route::resource('ride','AdminSeller\RideController');
+
 Route::resource('product','AdminSeller\ProductController');
 Route::resource('category','AdminSeller\CategoryController');
 Route::resource('image_optimize','AdminSeller\ImageOptimizeController');
@@ -123,6 +125,8 @@ Route::get('/customer/edit/{id}/edit', 'AdminSeller\VendorController@edit')->nam
 Route::post('/customer/update/form', 'AdminSeller\VendorController@update')->name('vendors.update');
 Route::post('/customer/destory/record', 'AdminSeller\VendorController@destory')->name('vendors.destory');
 Route::any('/customer/change/status', 'AdminSeller\VendorController@change_status')->name('vendors.change_status');
+Route::post('/add_money/{id}','AdminSeller\VendorController@add_money')->name('vendor.add_money');
+
 
 
 
@@ -178,4 +182,5 @@ Route::post('emailtemplate-destory','AdminSeller\EmailTemplateController@destory
 Route::post('revenue-destory','AdminSeller\RevenueController@destory')->name('revenue.destory');
 Route::post('revenue-destory','AdminSeller\RevenueController@destory')->name('revenue.destory');
 Route::post('discount-destory','AdminSeller\DiscountController@destory')->name('discount.destory');
+Route::post('ride-destory','AdminSeller\RideController@destory')->name('ride.destory');
 
